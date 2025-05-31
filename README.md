@@ -1,63 +1,70 @@
-Descripción
-Este script en Python permite transcribir archivos de audio a documentos Word con formato, incluyendo la identificación de hablantes y marcas de tiempo. Utiliza la API de AssemblyAI para la transcripción y la biblioteca python-docx para generar el documento.
+# 📝 Transcriptor de Audio a Documento Word
 
-📋 Requisitos previos
-Para utilizar este script, necesitarás instalar las siguientes dependencias:
+Este proyecto es un transcriptor automático que convierte archivos de audio en transcripciones estructuradas en un documento Microsoft Word (`.docx`), utilizando la API de [AssemblyAI](https://www.assemblyai.com/). También organiza la transcripción por hablantes con marcas de tiempo.
 
-bash
-pip install assemblyai python-docx
-🔑 Configuración necesaria
-Necesitarás una API key de AssemblyAI (puedes obtener una gratuita en su página web)
+## 🚀 Características
 
-Reemplaza la línea aai.settings.api_key = "46f568c434a349df894e5f74829619d2" con tu propia API key
+- Transcripción automática de archivos `.mp3`
+- Soporte para identificación de hablantes
+- Reintentos automáticos en caso de error
+- Generación de documento `.docx` con formato legible
+- Soporte para idioma español (`es`)
 
-🚀 Cómo usar el script
-Modifica la variable audio_file en la función main() para apuntar a tu archivo de audio local
 
-Ejecuta el script:
+## ⚙️ Dependencias
 
-bash
-python tu_script.py
-El script generará un archivo transcripcion.docx con los resultados
+Este proyecto requiere Python 3.8 o superior y las siguientes bibliotecas:
 
-⚙️ Características
-Transcripción automática de audio a texto
+- `assemblyai`
+- `python-docx`
 
-Identificación de diferentes hablantes
 
-Formateo profesional en documento Word
+## 🔑 Configuración
 
-Reintentos automáticos en caso de fallos
+Antes de ejecutar el script, asegúrate de colocar tu clave de API de AssemblyAI en esta línea del código:
+aai.settings.api_key = "TU_API_KEY_AQUI"
 
-Marcas de tiempo para cada intervención
 
-Soporte para idioma español
+Puedes obtener una clave gratuita en: https://www.assemblyai.com/
 
-📄 Estructura del documento generado
-El documento Word resultante contendrá:
+## 🧠 ¿Cómo funciona?
 
-Una sección con la transcripción completa
+1. El script intenta transcribir el archivo de audio local utilizando AssemblyAI.
+2. Si ocurre un error, realiza hasta 3 reintentos automáticos con una espera progresiva.
+3. Una vez que la transcripción es exitosa, se genera un documento `.docx` con:
+   - El texto completo transcrito
+   - Un desglose por hablante con formato y marcas de tiempo
 
-Una sección con la transcripción organizada por hablantes, incluyendo:
+## 🛠️ Uso
 
-Nombre del hablante (en negrita)
+1. Coloca tu archivo `.mp3` en la ruta especificada en el script, modificando la variable `audio_file`.
+2. Ejecuta el script desde la terminal o tu entorno de desarrollo:
 
-Marca de tiempo (subrayada)
 
-Texto transcrito
+3. El documento `transcripcion.docx` se generará en la misma carpeta del script.
 
-⚠️ Notas importantes
-El script está configurado para identificar específicamente a "Juan Gabriel Gomila" (Speaker A) y "Sebastián Barajas Caseny" (Speaker B). Modifica estos nombres según tus necesidades.
+## ✍️ Ejemplo de salida
 
-Para archivos largos, la transcripción puede tardar varios minutos.
+- **Encabezado:** "Transcripción completa"
+- **Texto:** Todo el audio transcrito en un solo bloque
+- **Por hablantes:** Texto estructurado por nombre (si corresponde), hora de inicio y contenido
 
-La versión gratuita de AssemblyAI tiene límites de uso.
+## 👥 Personalización de hablantes
 
-📌 Dependencias técnicas
-El script utiliza las siguientes bibliotecas:
+El script asigna nombres personalizados si los identificadores de los hablantes son `"A"` o `"B"`. Puedes editar este fragmento del código para personalizar los nombres de los hablantes:
 
-assemblyai: Para la conexión con la API de transcripción
 
-python-docx: Para la generación del documento Word
+## 📌 Notas
 
-time y sys: Para manejo de tiempos y salidas del sistema
+- El script está configurado para trabajar con idioma español (`language_code="es"`).
+- El archivo de salida `transcripcion.docx` se sobrescribirá si ya existe.
+- La lógica de reintentos ayuda a manejar errores de red o problemas temporales con la API.
+
+## 🧪 Ejemplo rápido
+
+Modifica las siguientes líneas para establecer tu archivo de entrada y el nombre del archivo de salida:
+
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Siéntete libre de modificar, distribuir y mejorar el código según tus necesidades.
