@@ -65,6 +65,6 @@ El script asigna nombres personalizados si los identificadores de los hablantes 
 Modifica las siguientes líneas para establecer tu archivo de entrada y el nombre del archivo de salida:
 
 
-## 📄 Licencia
+## 📄 Permisos
 
-Este proyecto está bajo la Licencia MIT. Siéntete libre de modificar, distribuir y mejorar el código según tus necesidades.
+Siéntete libre de modificar, distribuir y mejorar el código según tus necesidades.
