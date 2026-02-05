@@ -1,3 +1,5 @@
+Implementando importantes ajustes de seguridad y manejo del proyecto.
+
 # 📝 Transcriptor de Audio a Documento Word
 
 Este proyecto es un transcriptor automático que convierte archivos de audio en transcripciones estructuradas en un documento Microsoft Word (`.docx`), utilizando la API de [AssemblyAI](https://www.assemblyai.com/). También organiza la transcripción por hablantes con marcas de tiempo.
