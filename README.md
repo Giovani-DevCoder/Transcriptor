@@ -1,4 +1,4 @@
-Implementando importantes ajustes de seguridad y manejo del proyecto.
+Implementando importantes ajustes de seguridad y manejo del proyecto. Actualizacion de la documentacion pendiente.
 
 # 📝 Transcriptor de Audio a Documento Word
 
