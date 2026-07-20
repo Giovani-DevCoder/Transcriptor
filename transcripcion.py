@@ -58,7 +58,7 @@ def crear_documento_word(transcript, output_file):
             if utterance.speaker == "A":
                 speaker_name = "Juan Gabriel Gomila"
             elif utterance.speaker == "B":
-                speaker_name = "Sebastián Barajas Caseny"
+                speaker_name = "Paloma del Castillo"
             else:
                 speaker_name = f"Speaker {utterance.speaker}"
 
@@ -78,8 +78,8 @@ def crear_documento_word(transcript, output_file):
         return False
 
 def main():
-    audio_file = "C:/Users/Skywalker/Documents/Programacion/Transcriptor/Transcriptor/Frogmacion158.mp3"
-    output_file = "transcripcion.docx"
+    audio_file = "203.mp3"
+    output_file = "Frogmación 203: Entrevista a Paloma del Castillo - Siempre Caminando.docx"
 
     config = aai.TranscriptionConfig(
         speaker_labels=True,
