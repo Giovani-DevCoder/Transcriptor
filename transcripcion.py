@@ -5,7 +5,7 @@ from docx.oxml.ns import qn
 import time
 import sys
 
-aai.settings.api_key = "46f568c434a349df894e5f74829619d2"
+aai.settings.api_key = ""
 
 def transcribir_con_reintentos(audio_path, config, max_reintentos=3):
     transcriber = aai.Transcriber()
